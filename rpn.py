@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
 import operator
-import readline
-import math
 operators = {
     '+': operator.add,
     '-': operator.sub,
@@ -21,8 +19,6 @@ def calculate(myarg):
             arg2 = stack.pop()
             arg1 = stack.pop()
             result = function(arg1, arg2)
-            resultpow = arg1**arg2
-            resultpow2 = arg2**arg1
             stack.append(result)
         print(stack)
     if len(stack) != 1:
@@ -38,6 +34,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-if random.randint(0,10) == 5:
-    print("We did it");
